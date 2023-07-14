@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Popover, Button } from 'antd';
 
-function Signup ({ onClose }){
+function Signup (){
   const dispatch = useDispatch();
   const [signUpName, setSignUpName] = useState('');
   const [signUpUsername, setSignUpUsername] = useState('');
@@ -19,9 +19,8 @@ function Signup ({ onClose }){
 
 
  // création d'un nouvel utilisateur
-    const handleRegister = (e) => {
-      e.preventDefault();
-    fetch('http://localhost:3000/users/signup', {
+    const handleRegister = () => {
+      fetch('http://localhost:3000/users/signup', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ name: signUpName, password: signUpPassword, username:signUpUsername }),
@@ -36,13 +35,12 @@ function Signup ({ onClose }){
         }
            router.push('/home')   // redirige vers la page Home  //si data result est a true (fetch)
 				})
-        onClose();
-			};
+      };
     
   return (
     <div className={styles.popup}>
     <div className={styles.popup-content}>
-       <img src="logob.png" alt="logo" class="logo"/>
+       <img src="logotweeter.png" alt="logo" className={styles.logoRight}/>
         <h2>Create your Hackatweet account</h2>
         <form onSubmit={handleSubmit}>
        <input type="text" placeholder="Firstname" onChange={(e) => setSignUpName(e.target.value)} value={signUpName} required />
@@ -60,31 +58,31 @@ export default Signup;
 
   // a mettre sur composant login : 
 
-import React, { useState } from 'react';
-import SignupPopup from './SignupPopup';
+// import React, { useState } from 'react';
+// import SignupPopup from './SignupPopup';
 
-const login = () => {
-  const [isPopupOpen, setPopupOpen] = useState(false);
+// const login = () => {
+//   const [isPopupOpen, setPopupOpen] = useState(false);
 
   
 
  
-const handleSignupClick = () => {
-    setPopupOpen(true);
-  };
+// const handleSignupClick = () => {
+//     setPopupOpen(true);
+//   };
 
-  const handleClosePopup = () => {
-    setPopupOpen(false);
-  };
+//   const handleClosePopup = () => {
+//     setPopupOpen(false);
+//   };
 
-  return (
+//   return (
     
-    <div>
-      {<div>
-      {/* Votre contenu d'application */}
-      <button onClick={handleSignupClick}>Signup</button>
+//     <div>
+//       {<div>
+//       {/* Votre contenu d'application */}
+//       <button onClick={handleSignupClick}>Signup</button>
 
-      {isPopupOpen && <Signup onClose={handleClosePopup} />}
-    </div>
-  );
-};
+//       {isPopupOpen && <Signup onClose={handleClosePopup} />}
+//     </div>
+//   );
+// };
