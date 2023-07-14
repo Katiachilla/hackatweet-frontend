@@ -14,9 +14,9 @@ const PopoverSignin = () => {
       <span><FontAwesomeIcon icon={faXmark}   className={styles.crossIcon}/></span>
         <img src="logotweeter.png" alt="logo" className={styles.logo}/>
         <h2>Connect to Hackatweet</h2>
-        <input type="text" placeholder="Username" />
-        <input type="password" placeholder="Password" />
-        <button>Sign in</button>
+        <input type="text" placeholder="Username" className={styles.inputStyle} />
+        <input type="password" placeholder="Password" className={styles.inputStyle}/>
+        <button  className={styles.buttonIn}>Sign in</button>
        
       </div>
   );

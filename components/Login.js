@@ -1,23 +1,23 @@
 import styles from '../styles/Login.module.css';
 import React, { useState } from 'react';
 import PopoverSignin from './Signin';
-import { Popover } from 'antd';
+import PopoverSignup from './Signup';
+
 
 
 function Login() {
 
   const [isPopoverInOpen, setIsPopoverInOpen] = useState(false);
+  const [isPopoverUpOpen, setIsPopoverUpOpen] = useState(false);
 
   const handleSigninClick = () => {
     setIsPopoverInOpen(!isPopoverInOpen);
   };
+  const handleSignupClick = () => {
+    setIsPopoverUpOpen(!isPopoverUpOpen);
+  };
 
   
-// const handleSignupClick = () => {
-//   setIsPopoverOpen(!isPopoverOpen);
-// };
-
-
 
 // const handleClosePopup = () => {
 //   setPopupOpen(false);
@@ -40,13 +40,16 @@ function Login() {
             <div>
               <h1 className={styles.h1}>See what's happening</h1>
               <h2 className={styles.h2}>Join Hackatweet today.</h2>
-              <button className={styles.buttonUp}>Signup</button>
+              <button className={styles.buttonUp} onClick={handleSignupClick}>Signup</button>
+              {isPopoverUpOpen && (
+           <PopoverSignup  className={styles.Popover}/>
+          )}
               <p className={styles.p}>Already have an account?</p>
               <button className={styles.buttonIn}onClick={handleSigninClick}>Signin</button>
               {isPopoverInOpen && (
-        <PopoverSignin  className={styles.Popover}/>
-      )}
-            </div>
+           <PopoverSignin  className={styles.Popover}/>
+          )}
+          </div>
         </div> 
     
     </div>
