@@ -45,3 +45,14 @@ function Signin (){
 };
 
 export default Signin;
+
+
+
+
+
+
+const [popupVisible, setPopupVisible] = useState(false);
+{popupVisible && (
+  <div className="popup">
+    {/* Contenu du popup */}
+    <button onClick={() => setPopupVisible(false)}>Fermer</button>
