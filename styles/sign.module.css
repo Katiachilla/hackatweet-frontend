@@ -5,7 +5,7 @@
   align-items: center;
   height: 350px;
   width: 350px;
-  background-color: gray;
+  background-color: #15202b;
   border: 1px white solid;
   border-radius: 4px;
   /* transition-duration: 0.5s; */
@@ -24,9 +24,51 @@
 
 .crossIcon {
   cursor: pointer;
+  color: white;
+
 }
 
 .popoverContent {
   display: flex;
   flex-direction: column;
 }
+
+.buttonUp,
+.buttonIn {
+  padding: 10px 70px;
+  font-size: 18px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.h2{
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.buttonIn {
+  background-color: #ffffff;
+  color: #1da1f2;
+  border: 1px solid #1da1f2;
+  margin-bottom: 50px;
+}
+
+.inputStyle {
+  border: white;
+  border-bottom: 1px solid #ffffff80;
+  color: white;
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 5px;
+  width: 60%;
+  outline: none;
+  color: #ffffff80;
+}
+
