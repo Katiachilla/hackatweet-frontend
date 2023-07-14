@@ -38,9 +38,9 @@ const PopoverSignin = () => {
       <span><FontAwesomeIcon icon={faXmark}   className={styles.crossIcon}/></span>
         <img src="logotweeter.png" alt="logo" className={styles.logo}/>
         <h2>Connect to Hackatweet</h2>
-        <input type="text" placeholder="Username" onChange={(e) => setSignInUSername(e.target.value)} value={signInUsername}/>
-        <input type="password" placeholder="Password" onChange={(e) => setSignInPassword(e.target.value)} value={signInPassword} />
-        <button onClick={handleLogin}>Sign in</button>
+        <input type="text" placeholder="Username" onChange={(e) => setSignInUSername(e.target.value)} value={signInUsername} className={styles.inputStyle}/>
+        <input type="password" placeholder="Password" onChange={(e) => setSignInPassword(e.target.value)} value={signInPassword} className={styles.inputStyle}/>
+        <button onClick={handleLogin} className={styles.buttonIn}>Sign in</button>
       </div>
   );
 };

@@ -1,6 +1,7 @@
 import styles from '../styles/Login.module.css';
 import React, { useState } from 'react';
 import PopoverSignin from './Signin';
+import PopoverSignup from './Signup';
 
 
 
