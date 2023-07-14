@@ -15,9 +15,9 @@ const PopoverSignup = () => {
       <span><FontAwesomeIcon icon={faXmark}   className={styles.crossIcon}/></span>
         <img src="logotweeter.png" alt="logo" className={styles.logo}/>
         <h2 className={styles.h2}>Create your Hackatweet account</h2>
-        <input type="text" placeholder="Name" className={styles.inputStyle} />
-        <input type="text" placeholder="Username"  className={styles.inputStyle}/>
-        <input type="password" placeholder="Password" className={styles.inputStyle}/>
+        <input type="text" placeholder="Name"className={styles.inputStyle} />
+        <input type="text" placeholder="Username"className={styles.inputStyle}/>
+        <input type="password" placeholder="Password"className={styles.inputStyle}/>
         <button className={styles.buttonUp}>Sign up</button>
        
       </div>
