@@ -42,7 +42,7 @@ const PopoverSignin = () => {
     <div className={styles.popover}>
       <span><FontAwesomeIcon icon={faXmark}   className={styles.crossIcon}/></span>
         <img src="logotweeter.png" alt="logo" className={styles.logo}/>
-        <h2>Connect to Hackatweet</h2>
+        <h2 className={styles.h2}>Connect to Hackatweet</h2>
         <input type="text"placeholder="Username" onChange={(e) => setSignInUsername(e.target.value)} value={signInUsername} className={styles.inputStyle}/>
         <input type="password"placeholder="Password" onChange={(e) => setSignInPassword(e.target.value)} value={signInPassword} className={styles.inputStyle}/>
         <button onClick={handleLogin} className={styles.buttonIn}>Sign in</button>
