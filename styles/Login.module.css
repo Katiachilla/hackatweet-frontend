@@ -10,6 +10,13 @@
   padding: 0 20px;
   margin-top:0%;
  }
+ .popover {
+  width: 350px;
+  height: 350px; 
+  position: absolute;
+  top: 10%;
+
+ }
 
 .containerLeft {
   display: flex;
